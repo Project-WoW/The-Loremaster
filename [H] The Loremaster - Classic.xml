@@ -1,0 +1,17 @@
+<HBProfile xsi:noNamespaceSchemaLocation="../../Schemas/QuestProfileSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+	<Name>The Loremaster Classic Auto-Loader [Project-WoW]</Name>
+
+    <QuestOrder>
+        <CustomBehavior File="Misc\ProfileCompatibilityInfo"
+            AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+
+        <CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+        <CustomBehavior File="EnablePlugin" Names="Questhelper - ItemForAura,Anti Drown" />
+        <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This is a Beta Version, don't use it AFK!" />
+
+            <CustomBehavior File="LoadProfile" ProfileName="SubProfiles\Classic\Northern Barrens" RememberProfile="true" />
+
+    </QuestOrder>
+
+</HBProfile>
